@@ -35,7 +35,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
+          context: .
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/sandbox:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/sandbox:${{ github.env.VERSION }}
+            rilpires/sandbox:latest
