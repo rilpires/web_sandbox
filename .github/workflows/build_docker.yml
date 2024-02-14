@@ -36,4 +36,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: rilpires/sandbox:latest, rilpires/sandbox:${{ github.env.VERSION }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/sandbox:latest, ${{ secrets.DOCKERHUB_USERNAME }}/sandbox:${{ github.env.VERSION }}
